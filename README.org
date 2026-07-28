@@ -349,3 +349,10 @@ Emacs Lisp実装は次のモジュールに分かれています。すべて ~le
 
 乱数を使うゲーム処理は ~sengoku-random~ に集約され、テストでは ~sengoku-random-function~ を差し替えて再現可能にしています。日本語レイアウトの検証には文字数ではなく表示幅を使用し、戦略マップの各行が110表示桁、各国セルが10表示桁であることをERTで確認します。
 
+** ライセンス
+ライセンス
+
+Copyright (C) 2026 dkc
+
+このソフトウェアはGNU General Public License version 3の条件で
+公開されています。詳細はLICENSEファイルを参照してください。
