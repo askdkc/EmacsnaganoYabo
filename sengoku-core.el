@@ -1,6 +1,6 @@
 ;;; sengoku-core.el --- Core state for Sengoku -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2026
+;; Copyright (C) 2026 dkc
 
 ;; Author: dkc
 ;; Version: 0.1.0
@@ -118,12 +118,12 @@ an unrestricted integer."
 (defun sengoku-clan-index (game name)
   "Return the stable clan index named NAME in GAME, or -1."
   (sengoku--index-by-name (sengoku-game-clans game)
-                           name #'sengoku-clan-name))
+                          name #'sengoku-clan-name))
 
 (defun sengoku-province-index (game name)
   "Return the stable province index named NAME in GAME, or -1."
   (sengoku--index-by-name (sengoku-game-provinces game)
-                           name #'sengoku-province-name))
+                          name #'sengoku-province-name))
 
 (defun sengoku-clan-provinces (game clan-index)
   "Return province indices owned by CLAN-INDEX in GAME source order."
@@ -155,7 +155,7 @@ an unrestricted integer."
 (defun sengoku-general-used-p (game clan-index general-index)
   "Return non-nil when GENERAL-INDEX of CLAN-INDEX has acted in GAME this month."
   (not (zerop (aref (aref (sengoku-game-general-used game) clan-index)
-                          general-index))))
+                    general-index))))
 
 (defun sengoku-unused-generals (game clan-index)
   "Return unused general indices for CLAN-INDEX in GAME roster order."

@@ -1,6 +1,6 @@
 ;;; sengoku-combat.el --- Combat engine for Sengoku -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2026
+;; Copyright (C) 2026 dkc
 
 ;; Author: dkc
 ;; Version: 0.1.0
@@ -814,10 +814,10 @@ left, right exactly as in Vim."
                      siege (- 1 (sengoku-siege-unit-side unit))))
       (when (and (<= (abs (- (sengoku-siege-unit-row target)
                              (sengoku-siege-unit-row unit)))
-                      2)
+                     2)
                  (<= (abs (- (sengoku-siege-unit-column target)
                              (sengoku-siege-unit-column unit)))
-                      2))
+                     2))
         (push target targets)))
     (nreverse targets)))
 

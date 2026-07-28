@@ -1,6 +1,6 @@
 ;;; sengoku-save.el --- Vim-compatible saves for Sengoku -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2026
+;; Copyright (C) 2026 dkc
 
 ;; Author: dkc
 ;; Version: 0.1.0
@@ -39,11 +39,11 @@
 
 (define-error 'sengoku-save-error "Sengoku save error")
 (define-error 'sengoku-save-format-error
-  "Invalid Sengoku save data" 'sengoku-save-error)
+	      "Invalid Sengoku save data" 'sengoku-save-error)
 (define-error 'sengoku-save-version-error
-  "Unsupported Sengoku save version" 'sengoku-save-error)
+	      "Unsupported Sengoku save version" 'sengoku-save-error)
 (define-error 'sengoku-save-io-error
-  "Sengoku save file error" 'sengoku-save-error)
+	      "Sengoku save file error" 'sengoku-save-error)
 
 (defconst sengoku-save--top-level-keys
   '("ver" "year" "month" "player" "prov" "log" "cstate" "ally"))
@@ -586,10 +586,10 @@ hash table.  Only the last 30 log entries are included."
                  (player . ,(sengoku-game-player game))
                  (prov . ,province-objects)
                  (log . ,(sengoku-save--last-log-vector
-                           (sengoku-game-log game)))
+                          (sengoku-game-log game)))
                  (cstate . ,state-objects)
                  (ally . ,(sengoku-save--encode-alliances
-                            (sengoku-game-alliances game))))))
+                           (sengoku-game-alliances game))))))
           ;; The decoder is the single strict schema validator.  It examines a
           ;; detached object and a fresh game, so this cannot mutate GAME.
           (sengoku-save-decode-object object)

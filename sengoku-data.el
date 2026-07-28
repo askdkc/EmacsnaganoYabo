@@ -1,6 +1,6 @@
 ;;; sengoku-data.el --- Static data for Sengoku -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2026
+;; Copyright (C) 2026 dkc
 
 ;; Author: dkc
 ;; Version: 0.1.0
@@ -103,87 +103,87 @@
 (defconst sengoku-data-provinces
   [
    (:name "陸奥" :owner "南部" :grid-row 0 :grid-column 10
-    :adjacent ["出羽" "磐城"] :koku 380 :commerce 25 :soldiers 3500 :special nil)
+	  :adjacent ["出羽" "磐城"] :koku 380 :commerce 25 :soldiers 3500 :special nil)
    (:name "出羽" :owner "伊達" :grid-row 0 :grid-column 9
-    :adjacent ["陸奥" "会津" "越後"] :koku 400 :commerce 30 :soldiers 4000 :special nil)
+	  :adjacent ["陸奥" "会津" "越後"] :koku 400 :commerce 30 :soldiers 4000 :special nil)
    (:name "磐城" :owner "相馬" :grid-row 1 :grid-column 10
-    :adjacent ["陸奥" "会津" "常陸"] :koku 350 :commerce 30 :soldiers 8000 :special nil)
+	  :adjacent ["陸奥" "会津" "常陸"] :koku 350 :commerce 30 :soldiers 8000 :special nil)
    (:name "会津" :owner "蘆名" :grid-row 1 :grid-column 8
-    :adjacent ["出羽" "越後" "常陸" "上野" "磐城"] :koku 380 :commerce 30 :soldiers 4000 :special nil)
+	  :adjacent ["出羽" "越後" "常陸" "上野" "磐城"] :koku 380 :commerce 30 :soldiers 4000 :special nil)
    (:name "常陸" :owner "佐竹" :grid-row 1 :grid-column 9
-    :adjacent ["会津" "上野" "武蔵" "安房" "磐城"] :koku 420 :commerce 35 :soldiers 4200 :special nil)
+	  :adjacent ["会津" "上野" "武蔵" "安房" "磐城"] :koku 420 :commerce 35 :soldiers 4200 :special nil)
    (:name "上野" :owner "北条" :grid-row 2 :grid-column 8
-    :adjacent ["会津" "常陸" "武蔵" "信濃" "越後"] :koku 400 :commerce 35 :soldiers 4000 :special nil)
+	  :adjacent ["会津" "常陸" "武蔵" "信濃" "越後"] :koku 400 :commerce 35 :soldiers 4000 :special nil)
    (:name "武蔵" :owner "北条" :grid-row 2 :grid-column 9
-    :adjacent ["常陸" "上野" "相模" "甲斐" "安房"] :koku 520 :commerce 60 :soldiers 5500 :special nil)
+	  :adjacent ["常陸" "上野" "相模" "甲斐" "安房"] :koku 520 :commerce 60 :soldiers 5500 :special nil)
    (:name "相模" :owner "北条" :grid-row 3 :grid-column 10
-    :adjacent ["武蔵" "甲斐" "駿河" "安房"] :koku 400 :commerce 65 :soldiers 5000 :special nil)
+	  :adjacent ["武蔵" "甲斐" "駿河" "安房"] :koku 400 :commerce 65 :soldiers 5000 :special nil)
    (:name "安房" :owner "里見" :grid-row 4 :grid-column 10
-    :adjacent ["常陸" "武蔵" "相模"] :koku 340 :commerce 40 :soldiers 3800 :special nil)
+	  :adjacent ["常陸" "武蔵" "相模"] :koku 340 :commerce 40 :soldiers 3800 :special nil)
    (:name "越後" :owner "上杉" :grid-row 1 :grid-column 7
-    :adjacent ["出羽" "会津" "上野" "信濃" "越中"] :koku 450 :commerce 45 :soldiers 6000 :special nil)
+	  :adjacent ["出羽" "会津" "上野" "信濃" "越中"] :koku 450 :commerce 45 :soldiers 6000 :special nil)
    (:name "越中" :owner "上杉" :grid-row 1 :grid-column 6
-    :adjacent ["越後" "加賀" "美濃"] :koku 340 :commerce 35 :soldiers 3200 :special nil)
+	  :adjacent ["越後" "加賀" "美濃"] :koku 340 :commerce 35 :soldiers 3200 :special nil)
    (:name "加賀" :owner "本願寺" :grid-row 1 :grid-column 5
-    :adjacent ["越中" "越前"] :koku 400 :commerce 45 :soldiers 4500 :special (:loyalty 90))
+	  :adjacent ["越中" "越前"] :koku 400 :commerce 45 :soldiers 4500 :special (:loyalty 90))
    (:name "越前" :owner "朝倉" :grid-row 1 :grid-column 4
-    :adjacent ["加賀" "近江" "美濃"] :koku 420 :commerce 50 :soldiers 4200 :special nil)
+	  :adjacent ["加賀" "近江" "美濃"] :koku 420 :commerce 50 :soldiers 4200 :special nil)
    (:name "信濃" :owner "武田" :grid-row 2 :grid-column 6
-    :adjacent ["越後" "上野" "甲斐" "美濃" "三河" "遠江"] :koku 430 :commerce 30 :soldiers 5000 :special nil)
+	  :adjacent ["越後" "上野" "甲斐" "美濃" "三河" "遠江"] :koku 430 :commerce 30 :soldiers 5000 :special nil)
    (:name "甲斐" :owner "武田" :grid-row 2 :grid-column 7
-    :adjacent ["信濃" "武蔵" "相模" "駿河"] :koku 360 :commerce 35 :soldiers 5500 :special nil)
+	  :adjacent ["信濃" "武蔵" "相模" "駿河"] :koku 360 :commerce 35 :soldiers 5500 :special nil)
    (:name "駿河" :owner "今川" :grid-row 3 :grid-column 9
-    :adjacent ["甲斐" "相模" "遠江"] :koku 400 :commerce 55 :soldiers 4800 :special nil)
+	  :adjacent ["甲斐" "相模" "遠江"] :koku 400 :commerce 55 :soldiers 4800 :special nil)
    (:name "遠江" :owner "今川" :grid-row 3 :grid-column 8
-    :adjacent ["駿河" "信濃" "三河"] :koku 360 :commerce 40 :soldiers 3500 :special nil)
+	  :adjacent ["駿河" "信濃" "三河"] :koku 360 :commerce 40 :soldiers 3500 :special nil)
    (:name "三河" :owner "松平" :grid-row 3 :grid-column 7
-    :adjacent ["遠江" "信濃" "尾張"] :koku 380 :commerce 40 :soldiers 4200 :special nil)
+	  :adjacent ["遠江" "信濃" "尾張"] :koku 380 :commerce 40 :soldiers 4200 :special nil)
    (:name "尾張" :owner "織田" :grid-row 3 :grid-column 6
-    :adjacent ["三河" "美濃" "伊勢"] :koku 540 :commerce 65 :soldiers 5800 :special nil)
+	  :adjacent ["三河" "美濃" "伊勢"] :koku 540 :commerce 65 :soldiers 5800 :special nil)
    (:name "美濃" :owner "斎藤" :grid-row 2 :grid-column 5
-    :adjacent ["信濃" "越中" "越前" "尾張" "近江"] :koku 470 :commerce 45 :soldiers 4800 :special nil)
+	  :adjacent ["信濃" "越中" "越前" "尾張" "近江"] :koku 470 :commerce 45 :soldiers 4800 :special nil)
    (:name "伊勢" :owner "北畠" :grid-row 4 :grid-column 6
-    :adjacent ["尾張" "近江" "大和" "紀伊"] :koku 440 :commerce 55 :soldiers 4000 :special nil)
+	  :adjacent ["尾張" "近江" "大和" "紀伊"] :koku 440 :commerce 55 :soldiers 4000 :special nil)
    (:name "近江" :owner "浅井" :grid-row 2 :grid-column 4
-    :adjacent ["越前" "美濃" "伊勢" "山城"] :koku 480 :commerce 60 :soldiers 4500 :special nil)
+	  :adjacent ["越前" "美濃" "伊勢" "山城"] :koku 480 :commerce 60 :soldiers 4500 :special nil)
    (:name "山城" :owner "三好" :grid-row 3 :grid-column 5
-    :adjacent ["近江" "丹波" "摂津" "大和"] :koku 400 :commerce 95 :soldiers 4200 :special nil)
+	  :adjacent ["近江" "丹波" "摂津" "大和"] :koku 400 :commerce 95 :soldiers 4200 :special nil)
    (:name "摂津" :owner "三好" :grid-row 3 :grid-column 4
-    :adjacent ["山城" "丹波" "播磨" "大和" "紀伊" "阿波"] :koku 450 :commerce 90 :soldiers 4500 :special (:port 1))
+	  :adjacent ["山城" "丹波" "播磨" "大和" "紀伊" "阿波"] :koku 450 :commerce 90 :soldiers 4500 :special (:port 1))
    (:name "大和" :owner "松永" :grid-row 4 :grid-column 5
-    :adjacent ["山城" "摂津" "伊勢" "紀伊"] :koku 400 :commerce 50 :soldiers 4000 :special nil)
+	  :adjacent ["山城" "摂津" "伊勢" "紀伊"] :koku 400 :commerce 50 :soldiers 4000 :special nil)
    (:name "紀伊" :owner "雑賀" :grid-row 5 :grid-column 5
-    :adjacent ["大和" "摂津" "伊勢" "阿波"] :koku 360 :commerce 50 :soldiers 4200 :special (:guns 80))
+	  :adjacent ["大和" "摂津" "伊勢" "阿波"] :koku 360 :commerce 50 :soldiers 4200 :special (:guns 80))
    (:name "丹波" :owner "波多野" :grid-row 2 :grid-column 3
-    :adjacent ["山城" "摂津" "但馬" "播磨"] :koku 340 :commerce 35 :soldiers 3200 :special nil)
+	  :adjacent ["山城" "摂津" "但馬" "播磨"] :koku 340 :commerce 35 :soldiers 3200 :special nil)
    (:name "播磨" :owner "赤松" :grid-row 3 :grid-column 3
-    :adjacent ["丹波" "但馬" "摂津" "備前"] :koku 420 :commerce 50 :soldiers 3800 :special nil)
+	  :adjacent ["丹波" "但馬" "摂津" "備前"] :koku 420 :commerce 50 :soldiers 3800 :special nil)
    (:name "但馬" :owner "山名" :grid-row 2 :grid-column 2
-    :adjacent ["丹波" "播磨" "出雲"] :koku 300 :commerce 35 :soldiers 3000 :special nil)
+	  :adjacent ["丹波" "播磨" "出雲"] :koku 300 :commerce 35 :soldiers 3000 :special nil)
    (:name "備前" :owner "浦上" :grid-row 3 :grid-column 2
-    :adjacent ["播磨" "出雲" "安芸"] :koku 380 :commerce 45 :soldiers 3600 :special nil)
+	  :adjacent ["播磨" "出雲" "安芸"] :koku 380 :commerce 45 :soldiers 3600 :special nil)
    (:name "出雲" :owner "尼子" :grid-row 2 :grid-column 1
-    :adjacent ["但馬" "備前" "安芸" "周防"] :koku 400 :commerce 40 :soldiers 4800 :special nil)
+	  :adjacent ["但馬" "備前" "安芸" "周防"] :koku 400 :commerce 40 :soldiers 4800 :special nil)
    (:name "安芸" :owner "毛利" :grid-row 3 :grid-column 1
-    :adjacent ["備前" "出雲" "周防" "伊予"] :koku 400 :commerce 50 :soldiers 5200 :special nil)
+	  :adjacent ["備前" "出雲" "周防" "伊予"] :koku 400 :commerce 50 :soldiers 5200 :special nil)
    (:name "周防" :owner "毛利" :grid-row 4 :grid-column 0
-    :adjacent ["安芸" "出雲" "筑前" "伊予"] :koku 380 :commerce 55 :soldiers 4200 :special nil)
+	  :adjacent ["安芸" "出雲" "筑前" "伊予"] :koku 380 :commerce 55 :soldiers 4200 :special nil)
    (:name "阿波" :owner "三好" :grid-row 4 :grid-column 4
-    :adjacent ["摂津" "紀伊" "土佐" "伊予"] :koku 380 :commerce 45 :soldiers 4500 :special nil)
+	  :adjacent ["摂津" "紀伊" "土佐" "伊予"] :koku 380 :commerce 45 :soldiers 4500 :special nil)
    (:name "土佐" :owner "長宗我部" :grid-row 5 :grid-column 3
-    :adjacent ["阿波" "伊予"] :koku 350 :commerce 35 :soldiers 4500 :special nil)
+	  :adjacent ["阿波" "伊予"] :koku 350 :commerce 35 :soldiers 4500 :special nil)
    (:name "伊予" :owner "河野" :grid-row 4 :grid-column 2
-    :adjacent ["阿波" "土佐" "安芸" "周防" "豊後"] :koku 360 :commerce 40 :soldiers 3500 :special nil)
+	  :adjacent ["阿波" "土佐" "安芸" "周防" "豊後"] :koku 360 :commerce 40 :soldiers 3500 :special nil)
    (:name "筑前" :owner "大友" :grid-row 5 :grid-column 0
-    :adjacent ["周防" "肥前" "豊後"] :koku 400 :commerce 75 :soldiers 4200 :special (:port 1))
+	  :adjacent ["周防" "肥前" "豊後"] :koku 400 :commerce 75 :soldiers 4200 :special (:port 1))
    (:name "豊後" :owner "大友" :grid-row 5 :grid-column 1
-    :adjacent ["筑前" "伊予" "日向"] :koku 420 :commerce 55 :soldiers 5000 :special (:guns 30 :port 1))
+	  :adjacent ["筑前" "伊予" "日向"] :koku 420 :commerce 55 :soldiers 5000 :special (:guns 30 :port 1))
    (:name "肥前" :owner "龍造寺" :grid-row 6 :grid-column 0
-    :adjacent ["筑前" "薩摩"] :koku 380 :commerce 45 :soldiers 4200 :special (:port 1))
+	  :adjacent ["筑前" "薩摩"] :koku 380 :commerce 45 :soldiers 4200 :special (:port 1))
    (:name "日向" :owner "伊東" :grid-row 6 :grid-column 2
-    :adjacent ["豊後" "薩摩"] :koku 340 :commerce 30 :soldiers 3500 :special nil)
+	  :adjacent ["豊後" "薩摩"] :koku 340 :commerce 30 :soldiers 3500 :special nil)
    (:name "薩摩" :owner "島津" :grid-row 6 :grid-column 1
-    :adjacent ["肥前" "日向"] :koku 380 :commerce 35 :soldiers 5200 :special (:guns 30 :port 1))
+	  :adjacent ["肥前" "日向"] :koku 380 :commerce 35 :soldiers 5200 :special (:guns 30 :port 1))
    ]
   "The 41 province definitions, in save-compatible index order.")
 

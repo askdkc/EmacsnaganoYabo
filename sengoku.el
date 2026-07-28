@@ -1,6 +1,6 @@
 ;;; sengoku.el --- Sengoku simulation game for Emacs -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2026
+;; Copyright (C) 2026 dkc
 
 ;; Author: dkc
 ;; Version: 0.1.0

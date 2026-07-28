@@ -1,6 +1,6 @@
 ;;; sengoku-ui.el --- Emacs interface for Sengoku -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2026
+;; Copyright (C) 2026 dkc
 
 ;; Author: dkc
 ;; Version: 0.1.0
@@ -110,11 +110,11 @@
 
 (defconst sengoku-ui--clan-faces
   [sengoku-clan-0-face sengoku-clan-1-face sengoku-clan-2-face
-   sengoku-clan-3-face sengoku-clan-4-face sengoku-clan-5-face
-   sengoku-clan-6-face sengoku-clan-7-face sengoku-clan-8-face
-   sengoku-clan-9-face sengoku-clan-10-face sengoku-clan-11-face
-   sengoku-clan-12-face sengoku-clan-13-face sengoku-clan-14-face
-   sengoku-clan-15-face]
+		       sengoku-clan-3-face sengoku-clan-4-face sengoku-clan-5-face
+		       sengoku-clan-6-face sengoku-clan-7-face sengoku-clan-8-face
+		       sengoku-clan-9-face sengoku-clan-10-face sengoku-clan-11-face
+		       sengoku-clan-12-face sengoku-clan-13-face sengoku-clan-14-face
+		       sengoku-clan-15-face]
   "Faces reused cyclically for the 32 clans.")
 
 (defvar-local sengoku-session nil
@@ -194,7 +194,7 @@ ACTIVE-INDEX identifies the currently commanded province."
             owner-text))
          (soldiers
           (format "%d" (sengoku-vim-divide
-                         (+ (sengoku-province-soldiers province) 50) 100)))
+                        (+ (sengoku-province-soldiers province) 50) 100)))
          (body (concat mark owner-display))
          (body-width (string-width body))
          (soldier-display

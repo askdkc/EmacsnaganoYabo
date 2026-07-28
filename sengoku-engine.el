@@ -1,6 +1,6 @@
 ;;; sengoku-engine.el --- Strategic engine for Sengoku -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2026
+;; Copyright (C) 2026 dkc
 
 ;; Author: dkc
 ;; Version: 0.1.0
@@ -926,7 +926,7 @@ or `skip'.  ARGUMENTS is a property list using keys such as `:general',
 SESSION past its current direct province; callers should then invoke
 `sengoku-engine-advance'."
   (pcase-let* ((`(,game ,player ,province-index ,province)
-                 (sengoku-engine--player-context session))
+                (sengoku-engine--player-context session))
                (result
                 (pcase action
                   ('develop
