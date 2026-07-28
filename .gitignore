@@ -1,0 +1,7 @@
+# macOS metadata
+.DS_Store
+
+# Local AI assistant files
+.claude/
+CLAUDE.md
+AGENTS.md
